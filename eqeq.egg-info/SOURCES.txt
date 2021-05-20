@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+eqeq.egg-info/PKG-INFO
+eqeq.egg-info/SOURCES.txt
+eqeq.egg-info/dependency_links.txt
+eqeq.egg-info/requires.txt
+eqeq.egg-info/top_level.txt
+src/main.cpp
