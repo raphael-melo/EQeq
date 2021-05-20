@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import click
 
-from .main import CHARGE_DATA_PATH, IONIZATION_DATA_PATH, run_on_cif
-
+from .main import  run_on_cif
+from .settings import CHARGE_DATA_PATH, IONIZATION_DATA_PATH
 
 @click.command("cli")
 @click.argument(

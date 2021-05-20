@@ -5,7 +5,7 @@ from typing import Union
 
 import pyeqeq_eqeq
 
-from . import CHARGE_DATA_PATH, IONIZATION_DATA_PATH
+from .settings import CHARGE_DATA_PATH, IONIZATION_DATA_PATH
 
 
 def run_on_cif(
