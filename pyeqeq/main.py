@@ -1,8 +1,11 @@
-import pyeqeq_eqeq
-from typing import Union
-import pathlib
+# -*- coding: utf-8 -*-
 import json
-from . import IONIZATION_DATA_PATH, CHARGE_DATA_PATH
+import pathlib
+from typing import Union
+
+import pyeqeq_eqeq
+
+from . import CHARGE_DATA_PATH, IONIZATION_DATA_PATH
 
 
 def run_on_cif(
@@ -17,6 +20,7 @@ def run_on_cif(
     ewald_splitting: float = 50,
     ionization_data_path: Union[str, pathlib.Path] = IONIZATION_DATA_PATH,
     charge_data_path: Union[str, pathlib.Path] = CHARGE_DATA_PATH,
+    outpath: Union[str, pathlib.Path] = None,
 ):
     output_type = output_type.lower()
     method = method.lower()
@@ -33,6 +37,9 @@ def run_on_cif(
         ionization_data_path,
         charge_data_path,
     )
+    if outpath is not None:
+        with open(outpath, "w") as handle:
+            handle.write(result)
 
     if output_type == "list":
         return json.loads(result)

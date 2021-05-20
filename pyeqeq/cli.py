@@ -1,5 +1,7 @@
+# -*- coding: utf-8 -*-
 import click
-from .main import run_on_cif, IONIZATION_DATA_PATH, CHARGE_DATA_PATH
+
+from .main import CHARGE_DATA_PATH, IONIZATION_DATA_PATH, run_on_cif
 
 
 @click.command("cli")
@@ -78,6 +80,12 @@ from .main import run_on_cif, IONIZATION_DATA_PATH, CHARGE_DATA_PATH
     default=CHARGE_DATA_PATH,
     help="File with common oxidation states.",
 )
+@click.option(
+    "--outpath",
+    "-o",
+    type=click.Path(),
+    default=None,
+)
 def cli(
     cif,
     output_type,
@@ -90,8 +98,9 @@ def cli(
     ewald_splitting,
     ionization_data_path,
     charge_data_path,
+    outpath,
 ):
-    run_on_cif(
+    result = run_on_cif(
         cif,
         output_type,
         dielectric_screening,
@@ -103,4 +112,8 @@ def cli(
         ewald_splitting,
         ionization_data_path,
         charge_data_path,
+        outpath,
     )
+
+    if outpath is None:
+        print(result)

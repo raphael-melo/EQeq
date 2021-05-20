@@ -29,14 +29,14 @@ pip install pyeqeq
 To run the HKUST-1 example:
 
 ```bash
-eqeq examples/HKUST1.cif
+eqeq examples/HKUST1/HKUST1.cif -o examples/HKUST1/HKUST1_w_charge.cif
 ```
 
 ### Python interface
 
 ```python
 from pyeqeq import run_on_cif
-run_on_cif("examples/HKUST1.cif")
+run_on_cif("examples/HKUST1/HKUST1.cif")
 ```
 
 ## Summary
