@@ -15,6 +15,7 @@
 """Model agnostic Python implementation of the epsilon-PAL algorithm"""
 
 from distutils.core import setup
+
 from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 import versioneer
@@ -27,12 +28,12 @@ with open("README.md", encoding="utf-8") as fh:
     LONG_DESCRIPTION = fh.read()
 
 eqeq_module = Pybind11Extension(
-    "eqeq", ["src/main.cpp"], include_dirs=["src"], extra_compile_args=["-O3"]
+    "pyeqeq_eqeq", ["src/main.cpp"], include_dirs=["src"], extra_compile_args=["-O3"]
 )
 
 
 setup(
-    name="eqeq",
+    name="pyeqeq",
     version=versioneer.get_version(),
     description="Charge equilibration method for crystal structures.",
     long_description=LONG_DESCRIPTION,
@@ -40,8 +41,9 @@ setup(
     packages=["pyeqeq"],
     url="https://github.com/danieleongari/eqeq",
     # license="Apache 2.0",
-    install_requires=REQUIREMENTS,
+    install_requires=["pybind11"],
     ext_modules=[eqeq_module],
+    entry_points={"console_scripts": ["eqeq=pyeqeq.cli:cli"]},
     extras_require={
         "testing": ["pytest==6.*", "pytest-cov==2.*"],
         "docs": [
@@ -69,4 +71,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     cmdclass={"build_ext": build_ext},
+    package_data={"": ["data/*.dat"]},
+    include_package_data=True,
 )
