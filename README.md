@@ -58,3 +58,8 @@ features to the source code to fit the particular needs of your project.
 - An iterative loop that guesses the appropriate charge center (so the user does not have to guess)
 - Ewald parameter auto-optimization
 - Various code optimizations
+
+
+## Authors 
+
+[Original implementation by  Christopher E. Wilmer, Randall Q. Snurr (advisor), Hansung Kim (car output), Patrick Fuller (streaming functionality), Louis Knapp (json output)](https://github.com/numat/EQeq). [Updated by Daniele Ongari](https://github.com/danieleongari/EQeq).
