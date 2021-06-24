@@ -10,4 +10,6 @@ include *.md
 include setup.py
 
 # Include the data files
-recursive-include pyeqeq/data *
+recursive-include pyeqeq/data 
+
+recursive-include src/main.cpp src/main.h
