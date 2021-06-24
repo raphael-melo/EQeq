@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.2](https://www.github.com/lsmo-epfl/EQeq/compare/v0.0.1...v0.0.2) (2021-06-24)
+
+
+### Bug Fixes
+
+* add long description type ([50d76e9](https://www.github.com/lsmo-epfl/EQeq/commit/50d76e9d78c05506221114ab54664add937fcfe2))
+
 ### [0.0.1](https://www.github.com/lsmo-epfl/EQeq/compare/v1.1.0...v0.0.1) (2021-06-24)
 
 
