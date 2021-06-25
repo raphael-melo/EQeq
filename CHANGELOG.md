@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.7](https://www.github.com/lsmo-epfl/EQeq/compare/v0.0.6...v0.0.7) (2021-06-25)
+
+
+### Bug Fixes
+
+* include the header files ([8363bf7](https://www.github.com/lsmo-epfl/EQeq/commit/8363bf727baa5dc3259f88b59be9ac9acdb00139))
+
 ### [0.0.6](https://www.github.com/lsmo-epfl/EQeq/compare/v0.0.5...v0.0.6) (2021-06-24)
 
 
