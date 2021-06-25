@@ -28,4 +28,5 @@ setup(
     cmdclass={"build_ext": build_ext},
     package_data={"": ["data/*.dat"]},
     include_package_data=True,
+    headers=['src/main.h']
 )
