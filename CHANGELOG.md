@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.9](https://www.github.com/lsmo-epfl/EQeq/compare/v0.0.9...v0.0.9) (2021-07-02)
+
+### Bug Fixes
+
+* allow capturing standard output ([#11](https://www.github.com/lsmo-epfl/EQeq/issues/11)) ([9ded519](https://www.github.com/lsmo-epfl/EQeq/commit/9ded519d614a4cec6b10dd8716c7eb078f560552))
+
+
 ### [0.0.7](https://www.github.com/lsmo-epfl/EQeq/compare/v0.0.6...v0.0.7) (2021-06-25)
 
 
