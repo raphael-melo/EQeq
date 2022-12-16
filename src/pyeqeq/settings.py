@@ -1,4 +1,3 @@
-
 import pkg_resources
 
 IONIZATION_DATA_PATH = pkg_resources.resource_filename(

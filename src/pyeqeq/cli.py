@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
+"""Command line interface for pyeqeq."""
+
 import click
 
-from .main import  run_on_cif
+from .main import run_on_cif
 from .settings import CHARGE_DATA_PATH, IONIZATION_DATA_PATH
+
 
 @click.command("cli")
 @click.argument(
@@ -100,6 +103,7 @@ def cli(
     charge_data_path,
     outpath,
 ):
+    """Command line interface for pyeqeq."""
     result = run_on_cif(
         cif,
         output_type,
