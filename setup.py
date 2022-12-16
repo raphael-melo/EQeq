@@ -15,8 +15,8 @@
 """Model agnostic Python implementation of the epsilon-PAL algorithm"""
 
 from distutils.core import setup
-from pybind11.setup_helpers import Pybind11Extension, build_ext
 
+from pybind11.setup_helpers import Pybind11Extension, build_ext
 
 eqeq_module = Pybind11Extension(
     "pyeqeq_eqeq", ["src/main.cpp"], include_dirs=["src"], extra_compile_args=["-O3"]
@@ -28,5 +28,5 @@ setup(
     cmdclass={"build_ext": build_ext},
     package_data={"": ["data/*.dat"]},
     include_package_data=True,
-    headers=['src/main.h']
+    headers=["src/main.h"],
 )
